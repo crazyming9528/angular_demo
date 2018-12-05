@@ -1,6 +1,7 @@
-# Phonebook
+# angular demo by crazyming
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+这个项目创建自[Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+本来想写个公司内部的  通讯录来练习angular， 但是写了一点后发现 通讯录的 功能实在没啥做的， 就一个列表 、 详情页、 搜索、分页 就没了.... 所以就不做通讯录了，就只用来学习angular好了，在项目中写一些 平时会常用的功能，做个笔记 之类的。
 
 ## Development server
 
