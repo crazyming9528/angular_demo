@@ -1,0 +1,25 @@
+user works!
+<button (click)="testApi()">Test API</button>
+<ul>
+  USER LIST:
+  <h3 *ngIf="list.length">These datas comes from the API</h3>
+  <li *ngFor="let i of list" #apiLi>{{i.userName}} - {{i.userQq}} - {{i.phone}} - {{i.email}}</li>
+
+</ul>
+  <br><br><br><br>
+Test  child component and parent component:
+  <ul>
+    <h3>This is simulate data(Object)</h3>
+    <li *ngFor="let item of userList" (click)="chooseUserFnc(item)" >{{item.name}}</li>
+  </ul>
+
+<br><br><br><br>
+<ul>
+  <h3>This is simulate data2(string)</h3>
+  <li *ngFor="let item of userList2" (click)="chooseUserFnc2(item)" >{{item}}</li>
+</ul>
+
+
+<app-user-d *ngIf="selectedUser" [user]="selectedUser"></app-user-d>
+
+<app-user-d *ngIf="selectedUser2" [user2]="selectedUser2" (op)="fromChild($event)"></app-user-d>

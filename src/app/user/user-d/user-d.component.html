@@ -1,0 +1,22 @@
+<p>
+  There is user detail!
+</p>
+
+
+<div *ngIf="user">
+  <span style="color: #4d73bd">---------------------object</span>
+  <hr>
+  username:<p>{{user?.name}}</p>
+  <input *ngIf="user" type="text" [(ngModel)]="user.name">
+</div>
+
+
+
+<div *ngIf="user2">
+ <span style="color: orange"> ---------------------string</span>
+  <hr>
+  username:<p>{{user2}}</p>
+  <input *ngIf="user2" type="text" [(ngModel)]="user2"><button (click)="updateUser()" >修改</button>
+
+</div>
+

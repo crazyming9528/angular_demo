@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header>
+
+  <div class="logo"><h1>ST Engineering<span>Electronics</span></h1></div>
+<div class="nav">
+  <app-nav-list></app-nav-list>
+</div>
+</header>
+<section class="mainBody">
+测试  翻译
+
+  <button (click)="changeLang('en')">切换英文</button>
+  <button (click)="changeLang('zh')">切换中文</button>
+  {{ 'HELLO' | translate:param }}
+  {{ 'test-translate' | translate }}
+  <router-outlet></router-outlet>
+
+
+</section>
+<footer>
+  新钶电子（成都）
+</footer>

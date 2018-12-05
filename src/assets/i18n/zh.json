@@ -1,0 +1,4 @@
+{
+  "HELLO": "你好 {{value}}",
+  "test-translate":"这里是翻译，中文"
+}

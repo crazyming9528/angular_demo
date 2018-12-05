@@ -1,0 +1,26 @@
+<p>
+This is phone list component!
+</p>
+<hr>
+Test @Input
+<hr>
+<ul>
+
+  <li [routerLink]="['detail',item.name]" *ngFor="let item of phoneData">{{item.name}}的电话{{item.phonenumber}}</li>
+
+  <button on-click="clickMe('1111111111')">click</button>
+
+  <button (click)="clickMe('22')">click</button>
+
+
+
+
+</ul>
+
+
+<hr>
+<ng-content></ng-content>
+<hr>
+<button (click)="hehe()"> to father</button>
+
+

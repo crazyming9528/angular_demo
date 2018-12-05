@@ -1,0 +1,4 @@
+{
+  "HELLO": "hello {{value}}",
+  "test-translate":"There is translate ,english"
+}

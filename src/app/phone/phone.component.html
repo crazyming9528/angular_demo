@@ -1,0 +1,14 @@
+<p>
+  There is phone page!
+
+  <button (click)="testService()" >test Service</button>
+
+  <app-phone-list [phoneData]='phoneList' (diyEvent)='toFather()'>Test @Output()</app-phone-list>
+
+</p>
+
+
+<hr>
+Children router!
+<hr>
+<router-outlet></router-outlet>
