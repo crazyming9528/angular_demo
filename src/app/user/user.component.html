@@ -1,25 +1,46 @@
-user works!
-<button (click)="testApi()">Test API</button>
-<ul>
-  USER LIST:
-  <h3 *ngIf="list.length">These datas comes from the API</h3>
-  <li *ngFor="let i of list" #apiLi>{{i.userName}} - {{i.userQq}} - {{i.phone}} - {{i.email}}</li>
+<div class="wrap">
 
-</ul>
+
+
+<div class="block_left">
+
+
+  <button (click)="testApi()">Test API</button>
+  <ul>
+    USER LIST:
+    <h3 *ngIf="list.length">These datas comes from the API</h3>
+    <li *ngFor="let i of list" #apiLi>{{i.userName}} - {{i.userQq}} - {{i.phone}} - {{i.email}}</li>
+
+  </ul>
   <br><br><br><br>
-Test  child component and parent component:
+  Test child component and parent component:
   <ul>
     <h3>This is simulate data(Object)</h3>
-    <li *ngFor="let item of userList" (click)="chooseUserFnc(item)" >{{item.name}}</li>
+    <li *ngFor="let item of userList" (click)="chooseUserFnc(item)">{{item.name}}</li>
   </ul>
 
-<br><br><br><br>
-<ul>
-  <h3>This is simulate data2(string)</h3>
-  <li *ngFor="let item of userList2" (click)="chooseUserFnc2(item)" >{{item}}</li>
-</ul>
+  <br><br><br><br>
+  <ul>
+    <h3>This is simulate data2(string)</h3>
+    <li *ngFor="let item of userList2" (click)="chooseUserFnc2(item)">{{item}}</li>
+  </ul>
+  <input type="text" #inputText value="（控制台）测试模板引用变量">
+  <button (click)="consoleFn(inputText)" >控制台测试 模板引用变量 input</button>
+
+  <button (click)="child.alertFn()" >在模板中调用子组件的属性或者方法</button>
+
+  <button (click)="callChild()" >在ts中调用子组件的方法</button>
+  <button (click)="callChild('property')" >在ts中调用子组件的属性</button>
+
+</div>
+<div class="block_right">
+
+  <app-user-d #child [hidden]="!selectedUser"  [user]="selectedUser" ></app-user-d>
+
+  <app-user-d [hidden]="!selectedUser2" [user2]="selectedUser2" (op)="fromChild($event)"></app-user-d>
+</div>
 
 
-<app-user-d *ngIf="selectedUser" [user]="selectedUser"></app-user-d>
-
-<app-user-d *ngIf="selectedUser2" [user2]="selectedUser2" (op)="fromChild($event)"></app-user-d>
+</div>
+<div style="clear:both"></div>
+<div >1231322131321333333333333333232</div>

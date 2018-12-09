@@ -1,0 +1,13 @@
+.wrap{
+  display: flex;
+  justify-content: center;
+  .block_left{
+    width: 50%;
+
+  }
+
+  .block_right{
+    flex: 1;
+  }
+
+}

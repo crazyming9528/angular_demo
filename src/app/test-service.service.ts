@@ -6,6 +6,8 @@ import { Injectable } from '@angular/core';
 export class TestServiceService {
 
 log(){
+
+  alert(`i am  test service`);
   console.log( `i am  test service`);
 }
 

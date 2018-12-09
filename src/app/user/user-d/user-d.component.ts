@@ -13,6 +13,8 @@ import {User,} from '../interface';
 export class UserDComponent implements OnInit {
 
 
+  value=`我是子组件的属性`;
+
   @Input() user:User;
   @Input() user2:string;
   @Output() op =new  EventEmitter<string>();
@@ -30,8 +32,11 @@ export class UserDComponent implements OnInit {
     console.log(`update ${this.user2}`);
     this.op.emit(this.user2);
 
+  }
 
 
+  alertFn(){
+    alert(`I'm the method of the child component`);
   }
 
 }

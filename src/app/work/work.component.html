@@ -1,0 +1,48 @@
+<div>
+  <h3>{{value}}</h3>
+  <input type="text" [(ngModel)]="value" appTest/>
+</div>
+
+
+<child name="crazyming" age="18"></child>
+
+
+<div>
+  pipe:
+  {{"hello world" | uppercase}}
+  <p>
+    {{birthday | date }}
+  </p>
+  <p>
+    {{birthday | date | uppercase }}
+  </p>
+
+  <p>
+    {{birthday | date:format }}
+  </p>
+
+
+  <button (click)="toggleFn()">时间格式切换</button>
+  <ul>
+    <h3>自定义管道转换{{testAuth}}</h3>
+    <li *ngFor="let item of testAuth">{{item | auth}}</li>
+  </ul>
+
+
+  <ul>
+    <h3>过滤前</h3>
+    <li *ngFor="let item of user">姓名：{{item.name}} 职业：{{item.job}}</li>
+  </ul>
+  <ul>
+    <h3>使用过滤器 只显示 font-end工作的员工</h3>
+    <li *ngFor="let item of user|job">姓名：{{item.name}} 职业：{{item.job}}</li>
+  </ul>
+
+  <button (click)="addUser()">添加员工（过滤 列表的 并没有被添加）</button>
+  <p>
+  原因：因为push进 的数组 过滤器 判断的那个数组 的引用地址还是那个引用地址 并没有发生改变 所以没有更新
+  利用concat 合并下数组 产生 新的 引用地址 过滤器就更新了
+  </p>
+  <button (click)="addUser2()">添加员工（过滤 列表的 被添加了）</button>
+</div>
+

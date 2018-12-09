@@ -18,6 +18,9 @@ import { DataService} from './data.service';
 import { UserComponent } from './user/user.component';
 import { LoadingComponent } from './loading/loading.component';
 import { UserDComponent } from './user/user-d/user-d.component';
+import { TestDirective } from './test.directive';
+import { WorkComponent,Child } from './work/work.component';
+import { TestPipe,JobPipe } from './test.pipe';
 
 // // AoT requires an exported function for factories
 // export function HttpLoaderFactory(http: HttpClient) {
@@ -38,7 +41,12 @@ export function createTranslateLoader(http: HttpClient) {
     PhoneDetailComponent,
     UserComponent,
     LoadingComponent,
-    UserDComponent
+    UserDComponent,
+    TestDirective,
+    WorkComponent,
+    Child,
+    TestPipe,
+    JobPipe
   ],
   imports: [
     BrowserModule,
